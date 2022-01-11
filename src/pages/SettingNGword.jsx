@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export const SettingNGword = ({ NGword, onChange }) => {
+export const SettingNGword = ({ NGword, onBlur }) => {
   const navigate = useNavigate()
 
   const handleToGamePage = () => {
@@ -10,10 +10,12 @@ export const SettingNGword = ({ NGword, onChange }) => {
 
   return (
     <form onSubmit={handleToGamePage}>
-      <label>
-        NGワード：
-        <input type='text' value={NGword} onChange={(event) => onChange(event)} />
-      </label>
+      <div>
+        <label>
+          NGワード：
+          <input type='text' onBlur={(event) => onBlur(event)} />
+        </label>
+      </div>
       <input type='submit' value='Submit' />
     </form>
   )
