@@ -9,14 +9,16 @@ export const SettingNGword = ({ NGword, onBlur }) => {
   }
 
   return (
-    <form onSubmit={handleToGamePage}>
-      <div>
-        <label>
-          NGワード：
-          <input type='text' onBlur={(event) => onBlur(event)} />
-        </label>
-      </div>
-      <input type='submit' value='Submit' />
-    </form>
+    <div className='setting'>
+      <form onSubmit={handleToGamePage}>
+        <div>
+          <label>
+            NGワード：
+            <input type='text' onBlur={(event) => onBlur(event)} />
+          </label>
+        </div>
+        <input type='submit' value='Submit' />
+      </form>
+    </div>
   )
 }
